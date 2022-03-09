@@ -16,6 +16,12 @@
 
     @* Data Table *@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"> 
+
+    @* Date Picker *@
+    <link rel="stylesheet" href="https://common.olemiss.edu/_js/pickadate.js-3.5.3/lib/themes/classic.css"
+        id="theme_base">
+    <link rel="stylesheet" href="https://common.olemiss.edu/_js/pickadate.js-3.5.3/lib/themes/classic.date.css"
+        id="theme_date">
 </head>
 
 <body class="bg-dark">
@@ -40,6 +46,11 @@
 
     @* Sweet Alert2 *@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @* Date Picker *@
+	<script src="https://common.olemiss.edu/_js/pickadate.js"></script>
+
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

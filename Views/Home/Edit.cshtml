@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Home";
 }
 </br>
@@ -19,18 +19,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @{
-                            int index = 1;
-                        }
-                        @foreach (var item in Model)
+                        @{int index = 1 ;}
+                        @foreach (var item in Model.lists)
                         {
                             <tr>
                                 <td>
                                     @index
                                 </td>
-                                @{
-                                    index++;
-                                }
+                                @{index++;}
                                 <td>
                                     @item.list
                                 </td>
@@ -41,7 +37,6 @@
                                     <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-warning btn-sm">
                                         <i class="fa fa-pen"></i>
                                     </a>
-
                                     <a type="button" class="btn btn-danger btn-sm text-dark" onclick=Delete('/Home/Delete/@item.id')>
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
@@ -57,21 +52,23 @@
     <div class="col-md-5">
         <div class="card border-0">
             <div class="card-header bg-danger text-center">
-                <h1 class="text-white"><i class="fa-solid fa-plus-circle"></i> Add Todo List</h1>
+                <h1 class="text-white"><i class="fa-solid fa-pencil"></i> Edit Todo List</h1>
             </div>
-            <form method="post" asp-action="AddList" asp-controller="Home">
+            <form method="post" asp-action="Edit" asp-controller="Home">
+                <input type="hidden" name="id" value="@Model.todolist.id">
                 <div class="card-body">
                     <div class="form-group pt-2">
                         <label class="form-label" for="">
                             <h6>Todo List Topic</h6>
                         </label>
-                        <input type="text" class="form-control" name="list" id="list" required>
+                        <input type="text" class="form-control" name="list" id="list" value="@Model.todolist.list" required>
                     </div>
                     <div class="form-group pt-2">
                         <label class="form-label" for="">
                             <h6>Finish Date</h6>
                         </label>
-                        <input type="date" class="form-control" id="finishdate" name="finish_date">
+                        <input type="text" class="form-control" id="finishdate" name="finish_date">
+                        <input type="hidden" class="form-control" id="finishdate_hidden" value="@Model.format_finish">
                     </div>
 
                     <div class="form-group pt-2">
@@ -79,17 +76,17 @@
                             <h6>Priority</h6>
                         </label>
                     </div>
-                    <input type="range" class="form-control-range col-12" name="priority" min="1" max="3" step="1"
-                        value="1" id="priority_range">
+                    <input type="range" class="form-control-range col-12" name="priority" min="1" max="3" step="1" value="@Model.todolist.priority"
+                        id="priority_range">
                     <div class="row pt-2">
                         <div class="col-4 text-start text-danger">
                             Less
                         </div>
-
+                        
                         <div class="col-4 text-center text-danger">
                             medium
                         </div>
-
+                        
                         <div class="col-4 text-end text-danger">
                             More
                         </div>
@@ -97,8 +94,8 @@
 
                 </div>
                 <div class="card-footer text-center">
-                    <button type="submit" class="btn btn-success">Add</button>
-                    <button type="reset" class="btn btn-danger">Clear</button>
+                    <button type="submit" class="btn btn-warning">Edit</button>
+                    <a asp-action="Index" class="btn btn-danger">Back</a>
                 </div>
             </form>
         </div>
@@ -107,6 +104,10 @@
 
 @section Scripts{
 <script type="text/javascript">
+    let date1 = $('#finishdate_hidden').val()
+    console.log(date1)
+    document.getElementById("finishdate").value = date1;
+
     $(document).ready(function () {
         $('#todotbl').DataTable({
             searching: false,
