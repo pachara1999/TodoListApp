@@ -24,3 +24,14 @@ C:\Users\Pachara\Desktop\TodoListApp\obj\Debug\net6.0\todolist.dll
 C:\Users\Pachara\Desktop\TodoListApp\obj\Debug\net6.0\ref\todolist.dll
 C:\Users\Pachara\Desktop\TodoListApp\obj\Debug\net6.0\todolist.pdb
 C:\Users\Pachara\Desktop\TodoListApp\obj\Debug\net6.0\todolist.genruntimeconfig.cache
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Npgsql.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Pachara\Desktop\TodoListApp\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+C:\Users\Pachara\Desktop\TodoListApp\obj\Debug\net6.0\todolist.csproj.CopyComplete
